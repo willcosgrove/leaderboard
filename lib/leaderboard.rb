@@ -204,6 +204,11 @@ class Leaderboard
   def intersect_leaderboards(destination, keys, options = {:aggregate => :sum})
     @redis_connection.zinterstore(destination, keys.insert(0, @leaderboard_name), options)
   end
+
+  # Disconnect from the redis server
+  def disconnect
+    @redis_connection.disconnect
+  end
   
   private 
   
