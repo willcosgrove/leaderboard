@@ -207,7 +207,7 @@ class Leaderboard
 
   # Disconnect from the redis server
   def disconnect
-    @redis_connection.disconnect
+    @redis_connection.client.disconnect
   end
   
   private 
