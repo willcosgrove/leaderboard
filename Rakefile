@@ -12,13 +12,13 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "leaderboard"
-  gem.homepage = "http://github.com/agoragames/leaderboard"
+  gem.name = "multi-leaderboard"
+  gem.homepage = "http://github.com/willcosgrove/leaderboard"
   gem.license = "MIT"
   gem.summary = %Q{Leaderboards backed by Redis in Ruby}
   gem.description = %Q{Leaderboards backed by Redis in Ruby}
-  gem.email = "dczarnecki@agoragames.com"
-  gem.authors = ["David Czarnecki"]
+  gem.email = "will@willcosgrove.com"
+  gem.authors = ["David Czarnecki", "Will Cosgrove"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
@@ -45,7 +45,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "leaderboard #{version}"
+  rdoc.title = "multi-leaderboard #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

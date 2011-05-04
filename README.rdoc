@@ -8,10 +8,14 @@ Builds off ideas proposed in http://blog.agoragames.com/2011/01/01/creating-high
 
 Install the gem:
 
-	gem install leaderboard
+	gem install multi-leaderboard
 	
 Make sure your redis server is running! Redis configuration is outside the scope of this README, but 
 check out the Redis documentation, http://redis.io/documentation.
+
+== Difference Between leaderboard Gem
+
+I modified the leaderboard gem from agoragames so that instead of making a different Redis connection for each leaderboard object, it would share one Redis connection between all of the leaderboard objects.  This is not a perfect system for everyone, but for my use case, I had a ton of leaderboard objects, and my app would crash after so many connections were made.  This circumvents that problem for me.  I hope you find it useful.
 
 == Compatibility
 
